@@ -6,6 +6,18 @@
 #include <ctype.h>
 #include <windows.h>
 
+FILE *arqu;
+
+char lin[200];
+char  codi[2300][8];
+char  desc[2300][58];
+float dolar[2300];
+char precoST[13];
+
+int conta=0,x,y=0,j,i,k,w,p; 
+float cotaDol,reais[2300];
+char prod[58];
+   
 void Menu_Principal();
 void Menu_Dolar();
 void Dolar_Reais();
@@ -284,21 +296,8 @@ void Tira_Ponto(){
 //-----------------------------------------------------------------
 int main()
 {
-
-   FILE *arqu;
-
-   char lin[200];
-   char  codi[2300][8];
-   char  desc[2300][58];
-   float dolar[2300];
-   char precoST[13];
-
-   int conta=0,x,y=0,j,i,k,w,p; 
-   float cotaDol,reais[2300];
-   char prod[58];
-
    ler_arquivo();
    Menu_Dolar();
    Menu_Principal();
    system("pause");
-   }
+}
